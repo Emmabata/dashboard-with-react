@@ -1,0 +1,140 @@
+
+.navigation{
+    position:sticky;
+    top: 0;
+    display:flex;
+    flex-direction:column;
+    width:20%;
+    min-height: 100vh;
+    color:white;
+    background:linear-gradient(10deg, #810551, #05454d);
+    padding: 5px 10px; 
+    overflow: hidden;
+}
+
+.navigation.active{
+    width: max-content;
+}
+
+.navigation .menu {
+    position: absolute;
+    right:20px;
+    top: 0;
+    margin-left: auto;
+    font-size: 20px;
+    height: 35px;
+    aspect-ratio: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+    color: #05454d;
+}  
+
+.navigation.active .menu{
+    position: relative;
+}
+
+.navigation .menu.active{
+    rotate: 180deg;
+}
+
+.navigation header{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    gap: 10px;
+    padding: 25px  15px;
+    /* background-color:   rgba(255, 255, 255, 0.377); */
+    border-radius:14px;
+    margin-bottom: 10px;
+}
+
+.navigation header::after{
+    position:absolute;
+    content:"";
+    height: px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.377);
+    border-radius: 14px;
+    margin-top: 10px;
+}
+
+.navigation.dark header{
+    background-color:rgba(15, 15, 15, 0.486) ;
+}
+
+.navigation.dark header span{
+    color: white;
+}
+
+.navigation.active header{
+    padding: 0;
+    margin-top: 5px;
+    background-color: transparent;
+}
+
+.navigation.active header::after,
+.navigation.active header span{
+    display: none;
+}
+
+
+
+.navigation header .profile{
+    display: block;
+    height: 20%;
+    border-radius: 70%;
+    /* background-color: lightgray; */
+    padding: 2px;
+}
+
+.profile-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 35%;
+    height: 35%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.navigation.active header .profile {
+    height: 80px;
+    width: 70px;
+}
+.navigation.active header .profile .profile-img{
+    width: 50px;
+    height: 50px;
+}
+
+.navigation header span{
+    font-size: 15px; 
+    margin-left: auto;
+    margin-right: auto;
+    color: #fdd0e6;
+    font-size: large;
+    font-weight:800;
+}
+
+.navigation .divider {
+    position: relative;
+    margin: 0 auto;
+    height: 1px;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.438);
+}
+
+.navigation .bg-waves {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 1;
+}
+
+
